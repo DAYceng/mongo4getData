@@ -5,10 +5,10 @@ import time
 from utils import save2json
 
 helper = MongodbHelper()
-client = helper.login("root", "Medgen2011NB!")
+client = helper.login("账号", "密码")
 
 print(helper.getDatabases())  # 查询所有已存在的数据库
-print(helper.getTables('mlnx_data'))  # 查询指定数据库
+print(helper.getTables('xxx'))  # 查询指定数据库
 
 db_name = client.mlnx_data  # 需要单条查询的数据库名称
 tb_name = db_name.device_collection  # 分页名称
