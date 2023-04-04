@@ -25,6 +25,12 @@ for i in rows:
     print(i)
 
 # 保存数据值本地json文件
+# 注意，如果查询数据有某种类型的对象，请先将其转换为可dumps的数据类型再进行保存
+save_path = r'/code/mongo4heartdata'
+with open (save_path + '//testsave.txt', 'a') as f:
+    f.write(json.dumps(rows))
+    f.write("\n")
+
 # save_path = r'D:\code\...'
 # save2json(save_path, results)
 
